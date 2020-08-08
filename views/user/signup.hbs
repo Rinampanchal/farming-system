@@ -1,0 +1,77 @@
+{{>visitor}}
+<style>
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0B49A8;
+    border: none;
+    
+}
+
+.jumbotron
+{
+    background-color: rgb(54, 176, 192)!important;
+    box-shadow: rgb(2, 77, 87) 1px 5px 10px;
+    border-radius: 10px;
+}
+</style>
+<div class="container col-md-6">
+    <div class="jumbotron" style="margin-top: 10%;">
+        <center><h3 style="color: #0B49A8;">R E G I S T E R &nbsp;&nbsp; H E R E</h3></center>
+        <form action="/user/signup" method="post">
+            <div class="row col-md-12" style="margin-top: 20px;">
+                <div class="col">
+                <input type="text" class="form-control" placeholder="Customer Name" name="name" pattern="^[a-zA-Z ]*$">
+                </div> 
+                
+            </div>
+            
+            <div class="row col-md-12" style="margin-top: 20px;">
+                <div class="col col-md-6">
+                <input type="text" class="form-control" placeholder="Email Address" name="email">
+                </div>
+                <div class="col col-md-6">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                </div>
+            </div>
+
+             <div class="row col-md-12" style="margin-top: 20px;">
+                <div class="col">
+                    <select name="gender" class="form-control">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                
+            </div>
+
+            <div class="row col-md-12" style="margin-top: 20px;">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Contact Number" name="contact" pattern="^[6|7|8|9][0-9]{9}$">
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin-top: 20px;">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Address" name="address" >
+                </div>
+            </div>
+
+             <input type="hidden" name="_csrf" value="{{csrfToken}}">
+       <center><button type="submit" class="btn btn-primary col-md-6 "  style="margin-top: 20px;">Submit</center>
+            </form>
+
+
+            <div style="margin-top: 10px;">
+                
+
+            {{#if hasErrors}}
+        <div class="alert" role="alert">
+           {{# each messages}}
+               <center><p style="color:red;font-weight:bolder"> {{this}}</p></center>
+           {{/each}}
+        </div>
+        {{/if}}
+        </div>
+
+
+    </div>
+</div>

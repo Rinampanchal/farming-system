@@ -1,0 +1,23 @@
+{{>visitor}}
+<div class="text-center shadow p-5" style="border-radius: 10px; margin-top: 21vh; margin-bottom: 21vh; margin-left:70vh;margin-right:70vh;" data-gr-c-s-loaded="true">
+
+<form class="form-signin" action="/user/signin" method="post">
+  <img class="mb-4" src="https://icons.iconarchive.com/icons/google/noto-emoji-people-profession/1024/10254-man-farmer-icon.png" alt="" width="100" height="100">
+  <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+<div class="form-group">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" name="email" required="" autofocus="">
+</div>
+<div class="form-group">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required="">
+</div>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+  <div class="form-group">
+  <button class="btn btn-lg btn-info" style="border-radius: 50px; width:60%;" type="submit">Sign in</button>
+  </div>
+  <p>Don't have an account? <a class="text-decoration-none text-info" href="/user/signup">Sign up instead!</a></p>
+</form>
+
+
+</div>

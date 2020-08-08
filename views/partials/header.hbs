@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gra" >
+  <a class="navbar-brand" href="/"><span class="text-warning" ><b>FAR</b></span><span class="text-dark"><b>MIE</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"></ul>
+    <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+            {{# if login }}
+             <li class="nav-item">
+                    {{!-- <a class="nav-link" href="/user/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> User Account</a> --}}
+                    <a class="btn btn-warning btn-round"  href="/user/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> User Account</a>
+            </li>
+             <li class="nav-item">
+                        {{!-- <a class="nav-link" href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a> --}}
+                         <a class="btn btn-info btn-round"  href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+             </li>
+                        
+                        {{ else }}
+             <li class="nav-item">
+                        <a class="nav-link" href="/user/signup"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+                  </li>      
+             <li class="nav-item">
+                        <a class="nav-link" href="/user/signin"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign in</a>
+                  
+            </li>
+            {{/if}}
+        </ul>
+    </form>
+  </div>
+</nav>
+</div>
